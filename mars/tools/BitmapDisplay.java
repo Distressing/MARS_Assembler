@@ -44,7 +44,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 	 */
     public class BitmapDisplay extends AbstractMarsToolAndApplication {
    
-      private static String version = "Version 1.0";
+      private static String version = "Version 1.1";
       private static String heading =  "Bitmap Display";
    	
    	// Major GUI components
@@ -163,7 +163,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
    
       //////////////////////////////////////////////////////////////////////////////////////
       //  Rest of the protected methods.  These override do-nothing methods inherited from
-   	//  the abstract superclass.
+   	  //  the abstract superclass.
       //////////////////////////////////////////////////////////////////////////////////////
    	
       /**
@@ -416,6 +416,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
    	// update based on combo box selection (currently not editable but that may change).
        private void updateBaseAddress() {
          baseAddress = displayBaseAddresses[displayBaseAddressSelector.getSelectedIndex()];
+         System.out.println("Found base address");
       	/*  If you want to extend this app to allow user to edit combo box, you can always
       	    parse the getSelectedItem() value, because the pre-defined items are all formatted
       		 such that the first 10 characters contain the integer's hex value.  And if the
